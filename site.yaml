@@ -1,0 +1,11 @@
+---
+- hosts: prod_apache
+  become: yes
+  roles:
+    - apache
+    - smtp_message
+- hosts: prod_nginx
+  become: yes
+  roles:
+    - nginx
+    - smtp_message

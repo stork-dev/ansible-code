@@ -1,0 +1,3 @@
+---
+# tasks file for smtp_message
+- include_tasks: send_mail.yaml

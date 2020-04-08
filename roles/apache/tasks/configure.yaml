@@ -1,0 +1,5 @@
+---
+- name: copy file
+  copy: src=test.html dest=/var/www/html/
+  notify:
+    - restart apache server

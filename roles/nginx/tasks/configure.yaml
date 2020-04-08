@@ -1,0 +1,7 @@
+---
+- name: make directory
+  command: mkdir -p /var/www/html/
+- name: copy file
+  copy: src=test.html dest=/var/www/html/
+  notify:
+    - restart nginx server

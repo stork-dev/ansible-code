@@ -1,0 +1,5 @@
+---
+- hosts: prod_apache
+  become: yes
+  roles:
+    - java

@@ -1,0 +1,10 @@
+- name: Sending an e-mail using Gmail SMTP servers
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: email-id@gmail.com
+    password: your-password
+    to: Recipient <recipient-email@gmail.com>
+    subject: "Ansible Report Group : {{ group_names }}"
+    body: "Server : {{ ansible_facts['nodename'] }} in the groups: {{ group_names }} has been successfully updated."
+  delegate_to: localhost
